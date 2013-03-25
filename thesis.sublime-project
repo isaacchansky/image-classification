@@ -1,0 +1,9 @@
+{
+	"folders":
+	[
+		{
+			"path": "/home/isaac/ThesisProject",
+            "folder_exclude_patterns": ["img"]
+		}
+	]
+}
