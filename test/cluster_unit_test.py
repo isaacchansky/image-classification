@@ -13,6 +13,7 @@ import numpy as np
 
 
 def initialize_testing():
+    np.set_printoptions(precision=3)    # pretty printing of numpy arrays
     img_path = fo.PROJECT_ROOT_PATH + "res/img/starbucks"
     img_list = fo.read_imgs(img_path)
     gray_img_list = ip.convert_to_gray(img_list)
@@ -23,27 +24,23 @@ def initialize_testing():
 
 def adaptive_clustering_test(computed_SURF):
     print "starting clustering..."
-
-    # ADAPTIVE CLUSTERING
     # pass in KPDescriptor objects
-    clusters = cl.adaptive_cluster(computed_SURF, 0.2)
-
+    clusters = cl.adaptive_cluster(computed_SURF, 0.2, 'euclidian')
     print "created %s clusters" % len(clusters)
     avg = 0
     for cluster in clusters:
         avg += len(cluster)
     avg /= len(clusters)
     print "avg size is %s" % avg
+    centroids = cl.create_centroids(clusters)
+    print "created %s centroids" % len(centroids)
+    print centroids
 
 
 def kmeans_clustering_test(descriptors):
-    # KMEANS
     # pass in raw descriptors
     clusters, centroids = cl.kmeans(descriptors, 20)
     print "created %s clusters" % len(clusters)
-
-    np.set_printoptions(precision=3)    # pretty printing of numpy arrays
-
     for cluster, i in enumerate(clusters):
         print "\n=> CLUSTER ", i
         print "median is %s" % np.median(cluster, 0)
@@ -54,4 +51,5 @@ def kmeans_clustering_test(descriptors):
 
 if __name__ == "__main__":
     computed_SURF, descriptors = initialize_testing()
-    adaptive_clustering_test(computed_SURF)
+    #adaptive_clustering_test(computed_SURF)
+    kmeans_clustering_test(descriptors)
