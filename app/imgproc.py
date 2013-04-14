@@ -69,7 +69,7 @@ def calculate_surf(img_list, ext_flag):
 
     computed_img_list = []
     descriptor_DB = []
-    surf = cv2.SURF(300)
+    surf = cv2.SURF(500)
     #surf = cv2.SURF(85, 4, 2, True, False)     #extended to 128-element descriptors
 
     for img in img_list:
@@ -100,7 +100,7 @@ def single_img_surf(img):
     # returns a list of KPdescriptor objects
     print "running SURF on test image..."
     gimg = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-    surf = cv2.SURF(300)
+    surf = cv2.SURF(500)
     kpd_list = []
     keys, desc = surf.detect(gimg, None, False)
     descriptors = np.reshape(desc, (len(desc) / 64, 64))
@@ -117,7 +117,7 @@ def single_img_surf(img):
 # All functions deal in NumPy Arrays
 
 
-def reshape_descriptors_for_db(descriptors_set):
+def flatten_descriptors(descriptors_set):
     #reshapes from 'list of list of descriptors' to list of descriptors
     descriptors_list = []
     for imgData in descriptors_set:

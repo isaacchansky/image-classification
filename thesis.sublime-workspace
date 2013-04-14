@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"Ca",
+				"Calinski_Harabasz_idx"
+			],
+			[
 				"cluster",
 				"cluster"
 			],
@@ -32,10 +36,10 @@
 	"buffers":
 	[
 		{
-			"file": "app/classify.py",
+			"file": "test/cluster_unit_test.py",
 			"settings":
 			{
-				"buffer_size": 243,
+				"buffer_size": 2617,
 				"line_ending": "Unix"
 			}
 		},
@@ -43,7 +47,47 @@
 			"file": "app/cluster.py",
 			"settings":
 			{
-				"buffer_size": 4023,
+				"buffer_size": 5395,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/fileops.py",
+			"settings":
+			{
+				"buffer_size": 1413,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "test/pickleTest.py",
+			"settings":
+			{
+				"buffer_size": 503,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/build_db.py",
+			"settings":
+			{
+				"buffer_size": 421,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/imgproc.py",
+			"settings":
+			{
+				"buffer_size": 4370,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/classify.py",
+			"settings":
+			{
+				"buffer_size": 243,
 				"line_ending": "Unix"
 			}
 		},
@@ -56,22 +100,6 @@
 			}
 		},
 		{
-			"file": "app/fileops.py",
-			"settings":
-			{
-				"buffer_size": 909,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/imgproc.py",
-			"settings":
-			{
-				"buffer_size": 4418,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "app/kp_descriptor.py",
 			"settings":
 			{
@@ -80,18 +108,10 @@
 			}
 		},
 		{
-			"file": "test/cluster_unit_test.py",
+			"file": "test/classify_test.py",
 			"settings":
 			{
-				"buffer_size": 646,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "test/surf_unit_test.py",
-			"settings":
-			{
-				"buffer_size": 620,
+				"buffer_size": 3102,
 				"line_ending": "Unix"
 			}
 		}
@@ -132,6 +152,17 @@
 	},
 	"file_history":
 	[
+		"/home/isaac/ThesisProject/test/classify_test.py",
+		"/home/isaac/ThesisProject/test/surf_unit_test.py",
+		"/home/isaac/ThesisProject/res/resizeImgs.py",
+		"/media/isaac/2C385EDB385EA41C/libraries/Doc/DPS Projects/HTMLheavy/Demo_v/links/ScratchOffImage/scratch_off_v.html",
+		"/home/isaac/.bashrc",
+		"/home/isaac/.ssh/config",
+		"/home/isaac/ThesisProject/app/build_db.py",
+		"/home/isaac/ThesisProject/test/pickleTest.py",
+		"/home/isaac/ThesisProject/thesis.sublime-project",
+		"/home/isaac/ThesisProject/thesis.sublime-workspace",
+		"/home/isaac/ThesisProject/ThesisProject",
 		"/home/isaac/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
 		"/home/isaac/ThesisProject/app/imgProc.py",
 		"/home/isaac/ThesisProject/app/kpdescriptor.py",
@@ -149,10 +180,8 @@
 		"/home/isaac/ThesisProject/app/Cluster.py",
 		"/home/isaac/ThesisProject/app/Classify.py",
 		"/home/isaac/ThesisProject/app/__init__.py",
-		"/home/isaac/ThesisProject/thesis.sublime-project",
 		"/home/isaac/Thesis/logoDetect/__init__.py",
 		"/home/isaac/Thesis/knearestTest.py",
-		"/home/isaac/.bashrc",
 		"/home/isaac/Documents/designPatternsPOC/java/Singleton.java",
 		"/home/isaac/Documents/designPatternsPOC/python/cor.py",
 		"/home/isaac/Documents/designPatternsPOC/python/singleton.py",
@@ -198,7 +227,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 99.0,
+		"height": 0.0,
 		"where_history":
 		[
 			"<open files>"
@@ -209,6 +238,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"reshape_descriptors_for_db",
 			"fileOps",
 			"imgProc",
 			"logAll",
@@ -256,6 +286,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"flatten_descriptors",
 			"fileops",
 			"imgproc",
 			"log_all",
@@ -304,18 +335,18 @@
 			[
 				{
 					"buffer": 0,
-					"file": "app/classify.py",
+					"file": "test/cluster_unit_test.py",
 					"settings":
 					{
-						"buffer_size": 243,
+						"buffer_size": 2617,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								139,
-								139
+								2616,
+								2616
 							]
 						],
 						"settings":
@@ -411,7 +442,7 @@
 							"syntax": "Packages/Python/Python.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 945.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -421,15 +452,15 @@
 					"file": "app/cluster.py",
 					"settings":
 					{
-						"buffer_size": 4023,
+						"buffer_size": 5395,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3313,
-								3313
+								5394,
+								5394
 							]
 						],
 						"settings":
@@ -525,25 +556,25 @@
 							"syntax": "Packages/Python/Python.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 1890.0,
+						"translation.y": 2835.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "app/db_logo_obj.py",
+					"file": "app/fileops.py",
 					"settings":
 					{
-						"buffer_size": 1084,
+						"buffer_size": 1413,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1055,
-								1055
+								1082,
+								1082
 							]
 						],
 						"settings":
@@ -639,25 +670,25 @@
 							"syntax": "Packages/Python/Python.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 441.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 3,
-					"file": "app/fileops.py",
+					"file": "test/pickleTest.py",
 					"settings":
 					{
-						"buffer_size": 909,
+						"buffer_size": 503,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								694,
-								694
+								418,
+								418
 							]
 						],
 						"settings":
@@ -760,18 +791,18 @@
 				},
 				{
 					"buffer": 4,
-					"file": "app/imgproc.py",
+					"file": "app/build_db.py",
 					"settings":
 					{
-						"buffer_size": 4418,
+						"buffer_size": 421,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								161,
-								161
+								237,
+								237
 							]
 						],
 						"settings":
@@ -874,18 +905,18 @@
 				},
 				{
 					"buffer": 5,
-					"file": "app/kp_descriptor.py",
+					"file": "app/imgproc.py",
 					"settings":
 					{
-						"buffer_size": 645,
+						"buffer_size": 4370,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								398,
-								398
+								2987,
+								2987
 							]
 						],
 						"settings":
@@ -981,25 +1012,25 @@
 							"syntax": "Packages/Python/Python.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1701.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 6,
-					"file": "test/cluster_unit_test.py",
+					"file": "app/classify.py",
 					"settings":
 					{
-						"buffer_size": 646,
+						"buffer_size": 243,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								195,
-								195
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1102,18 +1133,18 @@
 				},
 				{
 					"buffer": 7,
-					"file": "test/surf_unit_test.py",
+					"file": "app/db_logo_obj.py",
 					"settings":
 					{
-						"buffer_size": 620,
+						"buffer_size": 1084,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								384,
-								384
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1210,6 +1241,234 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "app/kp_descriptor.py",
+					"settings":
+					{
+						"buffer_size": 645,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": false,
+							"sublimelinter_mark_style": "outline",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "test/classify_test.py",
+					"settings":
+					{
+						"buffer_size": 3102,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								300,
+								300
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": false,
+							"sublimelinter_mark_style": "outline",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 189.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

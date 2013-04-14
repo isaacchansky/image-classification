@@ -19,37 +19,78 @@ def initialize_testing():
     gray_img_list = ip.convert_to_gray(img_list)
     print "number of images: ", len(img_list)
     computed_SURF, descriptors = ip.calculate_surf(gray_img_list, False)
+    print "cs", len(computed_SURF)
+    print "des ", len(descriptors)
     return computed_SURF, descriptors
 
 
 def adaptive_clustering_test(computed_SURF):
     print "starting clustering..."
     # pass in KPDescriptor objects
-    clusters = cl.adaptive_cluster(computed_SURF, 0.2, 'euclidian')
-    print "created %s clusters" % len(clusters)
-    avg = 0
-    for cluster in clusters:
-        avg += len(cluster)
-    avg /= len(clusters)
-    print "avg size is %s" % avg
-    centroids = cl.create_centroids(clusters)
-    print "created %s centroids" % len(centroids)
-    print centroids
+    cluster_list, centroids = cl.adaptive_cluster(computed_SURF, 0.2, 'm-estimator')
+    print "created %s clusters" % len(cluster_list)
+    print "with %s centroids" % len(centroids)
+    cluster_list_loc = fo.store_data('clusterListTest', cluster_list)
+    print 'saved cluster list loc'
+    reloaded_data = fo.load_data(cluster_list_loc)
+    print reloaded_data
+    return reloaded_data
 
 
-def kmeans_clustering_test(descriptors):
+def efficient_adaptive_clustering_test(computed_SURF):
+    print "starting clustering..."
+    # pass in KPDescriptor objects
+    dist_func = cl.m_estimator
+    cluster_list, centroids = cl.ea_cluter(computed_SURF, 0.2, dist_func)
+    print "created %s clusters" % len(cluster_list)
+    print "with %s centroids" % len(centroids)
+    cluster_list_loc = fo.store_data('clusterListTest', cluster_list)
+    print 'saved cluster list loc'
+    reloaded_data = fo.load_data(cluster_list_loc)
+    print reloaded_data
+    return reloaded_data
+
+
+def kmeans_clustering_test(descriptors, k):
     # pass in raw descriptors
-    clusters, centroids = cl.kmeans(descriptors, 20)
+    clusters, centroids = cl.kmeans(descriptors, k)
     print "created %s clusters" % len(clusters)
-    for cluster, i in enumerate(clusters):
-        print "\n=> CLUSTER ", i
-        print "median is %s" % np.median(cluster, 0)
-        print "st dev is %s" % np.std(cluster, 0)
-        print "range of values is %s" % np.ptp(cluster, 0)
-        print "variance is %s" % np.var(cluster, 0)
+    inner_variance = []
+    outer_variance = np.average(np.var(centroids))
+    for i, cluster in enumerate(clusters):
+        #print "\n=> CLUSTER ", i
+        #print "median is %s" % np.average(np.median(cluster, 0))
+        #print "st dev is %s" % np.average(np.std(cluster, 0))
+        #print "range of values is %s" % np.average(np.ptp(cluster, 0))
+        #print "variance is %s" % np.average(np.var(cluster, 0))
+        inner_variance.append(np.average(np.var(cluster, 0)))
 
+    return np.average(inner_variance), outer_variance
+
+
+def iterative_kmeans_test(descriptors):
+    idx_list = cl.iterative_k_means(descriptors)
+    print idx_list
 
 if __name__ == "__main__":
     computed_SURF, descriptors = initialize_testing()
     #adaptive_clustering_test(computed_SURF)
-    kmeans_clustering_test(descriptors)
+    '''
+    maxclusters = len(descriptors)
+    metric = []
+    for i in range(1, maxclusters+6):
+        iv, ov = kmeans_clustering_test(descriptors, i)
+        metric.append(ov/iv)
+    print metric
+    print max(metric)
+    #'''
+
+    '''
+    ikm_result = iterative_kmeans_test(descriptors)
+    fo.store_data('iterative_kmeans_result', ikm_result)
+    print "stored."
+    r = fo.load_data('iterative_kmeans_result')
+    print r
+    #'''
+
+    res = efficient_adaptive_clustering_test(computed_SURF)

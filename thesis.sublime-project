@@ -3,7 +3,7 @@
 	[
 		{
 			"path": "/home/isaac/ThesisProject",
-            "folder_exclude_patterns": ["img"]
+            "folder_exclude_patterns": ["img", "data", "testData"]
 		}
 	]
 }

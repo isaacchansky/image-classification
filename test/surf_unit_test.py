@@ -16,7 +16,7 @@ gray_img_list = ip.convert_to_gray(img_list)
 
 computed_SURF, descriptors = ip.calculate_surf(gray_img_list, False)
 
-desc_list = ip.reshape_descriptors_for_db(descriptors)
+desc_list = ip.flatten_descriptors(descriptors)
 print desc_list
 
 data = ip.get_all_descriptors(desc_list)
